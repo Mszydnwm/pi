@@ -3,6 +3,12 @@ kat="${1:-}" #utworzenie zmiennej dla  kataloga wejściowego
 if [ "$kat" = "-n" ]; then
 echo "program patrzy czy folder istnieje, jeśli nie to wypisuję bład"
 echo "program przeszukuje podany katalog i wypisuję 5 największych podkatalogów"
+echo "if [ ! -d "$kat" ]; then"
+echo "echo katalog nie istnieje"
+echo "exit 1"
+echo "fi" 
+echo "date +"%F %T"" 
+echo "du -sh "$kat"/*/ 2>/dev/null|sort -h -r |tail -5"
 exit 0   
 fi
 if [ ! -d "$kat" ]; then #warunek który sprawdza czy katalog istnieje
