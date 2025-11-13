@@ -1,0 +1,10 @@
+grep -iE 'warn|error'
+mkdir -p work/notes
+mkdir -out
+tr-cs '[:alnum:]''\n'
+tr '[:upper:]' '[:lower:]'
+sort 
+uniq -c
+sort -nr
+head -10
+
